@@ -77,34 +77,49 @@
 // containsVowel(sentance);
 
 //
-// 06 | piglatin - Incomplete, cant get the first letter off
+// /06 | piglatin - Incomplete, cant get the first letter off
 //
 // Write a function called piglatin that takes a single string and returns the piglatin version of that string.
 //
 // Hint: look into the split() function that you can call on strings.
 
-// let str = "Bring your laptop";
-// let pig = str.split(" ");
-//
-//
-//  function piglatin(string) {
-//
-//    for (var i = 0; i < pig.length; i++) {
-//       console.log(pig[i] + "ay");
-//       let word = pig[i];
-//
-//       console.log(word);
-//       let letter = word.split("");
-//
-//       console.log(letter[0]);
-//
-//         for (var x = 0; x < word.length; x++) {
-//           console.log();
-//         }
-//    }
-//  }
-//
-// console.log(piglatin(str));
+
+
+let phrase = "Bring your laptop";
+let pig = phrase.split(" ");
+
+ function piglatin(phrase) {
+   //
+  //  let firstoff = pig.pop();
+  //  console.log(firstoff);
+    // console.log(pig);
+  for (var x = 0; x < pig.length; i++) {
+    let word = pig.shift();
+    let ltr = word.split("")
+    // console.log(ltr);
+    let reduced = ltr.shift();
+    let joined = ltr.join("");
+    // console.log(ltr.join(""));
+    // console.log(reduced);
+    let new_word = (joined + reduced) + "ay";
+    console.log(new_word);
+    // console.log(pig.shift(""));
+  }
+
+   for (var i = 0; i < phrase.length; i++) {
+     console.log(pig.shift());
+
+      console.log(pig[i] + "ay");
+      let word = pig[i];
+
+      console.log(word);
+      // let letter = word.split("");
+      // console.log(letter[0]);
+   }
+ }
+
+console.log(piglatin(""));
+
 
 
 // 07 | longestWord - worked this out in class and its still not right...
